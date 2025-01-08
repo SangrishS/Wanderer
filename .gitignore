@@ -1,0 +1,42 @@
+# Python-specific
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+env/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
+*.pyc
+*.pyo
+
+# MacOS
+.DS_Store
+
+# Byte-compiled and cached files
+*.swp
+*.swo
+*.bak
+
+# IDE and editor-specific files
+.vscode/
+.idea/
+*.iml
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Misc
+*.tmp
+*.temp
+*.bak
