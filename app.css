@@ -1,0 +1,158 @@
+:root {
+    /* === Color Palette === */
+    /* Backgrounds & Neutrals */
+    --color-body-bg: #000000;        /* Light neutral gray */
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-dark-text: #1F2933;      /* Deep neutral text color */
+    --color-heading-text: #1A202C;   /* Slightly darker for headings */
+    --color-gray-border: #E2E8F0;    /* Subtle border color */
+    --color-gray-scrollbar: #A0AEC0; 
+    --color-gray-scrollbar-hover: #718096;
+    
+    /* Primary (Modern Blue) */
+    --color-primary: #3B82F6;        /* Vivid modern blue */
+    --color-primary-hover: #2563EB;  /* Slightly darker for hover */
+
+    /* Alerts & States */
+    --color-info-bg: #EBF8FF;        /* Light blue background */
+    --color-info-border: #4299E1;    
+    --color-success-bg: #F0FFF4;     /* Light green background */
+    --color-success-border: #48BB78; 
+    --color-warning-bg: #FFFAF0;     /* Light orange background */
+    --color-warning-border: #ED8936; 
+    --color-error-bg: #FFF5F5;       /* Light red background */
+    --color-error-border: #F56565;   
+
+    /* === Typography & Sizing === */
+    --font-base: "Inter", sans-serif;
+    --font-size-base: 16px;
+    --radius-base: 8px;
+    --radius-container: 12px;
+    --padding-container: 2rem 3rem;
+    --padding-box: 1rem;
+}
+
+/* === Reset & Body === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background-color: var(--color-body-bg);
+    font-family: var(--font-base);
+    font-size: var(--font-size-base);
+    color: var(--color-dark-text);
+    line-height: 1.5;
+}
+
+/* === Main Content Container === */
+.block-container {
+    border-radius: var(--radius-container);
+    padding: var(--padding-container);
+    background-color: var(--color-white);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* === Headings === */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-base);
+    color: var(--color-heading-text);
+    margin-bottom: 0.5em; /* Provide spacing below headings */
+}
+
+/* === Streamlit Markdown-specific headings === */
+.stMarkdown h2 {
+    color: var(--color-heading-text);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* === Buttons === */
+button {
+    border-radius: var(--radius-base) !important;
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
+    font-weight: 600 !important;
+    padding: 0.5rem 1rem !important;
+    margin: 0.25rem 0 !important;
+    border: none !important;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--color-primary-hover) !important;
+}
+
+/* === Info, Success, Warning, Error Boxes === */
+.element-container .element-box {
+    border-radius: var(--radius-base);
+    padding: var(--padding-box);
+    margin-bottom: 1rem;
+}
+
+.element-container .element-box.info {
+    background-color: var(--color-info-bg);
+    border-left: 4px solid var(--color-info-border);
+}
+
+.element-container .element-box.success {
+    background-color: var(--color-success-bg);
+    border-left: 4px solid var(--color-success-border);
+}
+
+.element-container .element-box.warning {
+    background-color: var(--color-warning-bg);
+    border-left: 4px solid var(--color-warning-border);
+}
+
+.element-container .element-box.error {
+    background-color: var(--color-error-bg);
+    border-left: 4px solid var(--color-error-border);
+}
+
+/* === Scrollbar Styling === */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--color-body-bg);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-gray-scrollbar);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gray-scrollbar-hover);
+}
+
+/* === Sidebar === */
+[data-testid="stSidebar"] {
+    background-color: var(--color-white);
+    border-right: 2px solid var(--color-gray-border);
+}
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2 {
+    color: var(--color-heading-text);
+    margin-bottom: 0.5em;
+}
+
+[data-testid="stSidebar"] .css-1n543e5 {
+    padding: 1rem;
+}
+
+/* === Forms & Misc Elements === */
+.stSelectbox label,
+.stSlider label,
+.stRadio label {
+    font-weight: 600;
+    color: var(--color-heading-text);
+}
